@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        background: #333;
+        color: #fff;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 15px;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 0 20px;
+      }
+      .section {
+        background: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+      }
+      .section h2 {
+        margin-top: 0;
+      }
+      .info {
+        display: grid;
+        gap: 10px;
+      }
+      .info-item {
+        background: #eee;
+        padding: 10px;
+        border-radius: 4px;
+      }
+      footer {
+        text-align: center;
+        padding: 15px;
+        background: #333;
+        color: #fff;
+        margin-top: 20px;
+      }
+      .about-container{
+        display: flex;
+      }
+      .about-container img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Aaron P. Quintanar</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#info">Info</a>
+        <a href="#skills">Skills</a>
+        <a href="#message">Message</a>
+      </nav>
+    </header>
+
+    <div class="container">
+        
+      <section class="section" id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="Aaron.jpg" alt="Aaron P. Quintanar">
+            <p>Hi, I'm Aaron Policarpio Quintanar. I'm 21 years old and I'm from San Isidro, Tarlac City.
+               I'm actually a bit shy, but I really like meeting new people and learning from others. I hope we can get along well.</p>
+        </div>
+      </section>
+
+      <section class="section" id="info">
+        <h2>Personal Info</h2>
+        <div class="info">
+          <div class="info-item"><strong>Address:</strong> San Isidro Tarlac City</div>
+          <div class="info-item"><strong>Birthday:</strong> August 22, 2004</div>
+          <div class="info-item">
+            <strong>Education:</strong> 4th year College 
+          </div>
+          <div class="info-item">
+            <strong>Ethnicity:</strong> Filipino
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <h2>Hobbies</h2>
+        <div class="info">
+          <div class="info-item">Play online games</div>
+          <div class="info-item">Watch horror films</div>
+          <div class="info-item">Eat food while watching Anime</div>
+          <div class="info-item">Sleep all day</div>
+        </div>
+      </section>
+
+      <section class="section" id="message">
+        <h2>Message to the Viewer</h2>
+        <p>Hi there! Thanks a lot for dropping by my portfolio. I'm really happy to share a bit of myself and my work
+          with you. I may be a little shy, but I put effort and heart into what I do, and I hope you'll see that as you look
+          around. Feel free to explore and get to know me better through my projects. I appreciate your time, and I
+          hope you enjoy checking things out, see you ya'll at school!
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      <p>© 2025 Aaron P. Quintanar. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
