@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&display=swap" rel="stylesheet">
+    <title>WeFit</title>
+    <link rel="icon" href="pics/logo.png">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="videoProgram.css">
+</head>
+<body>
+    <nav id="nav">
+        <div class="logo">
+            <img src="pics/logo.png" alt="Logo Picture">
+            <p>Program Video</p>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#About">About</a></li>
+            <li><a href="index.html#Contact">Contact</a></li>
+            <li onclick="show()">≡</li>
+        </ul>
+        <div class="optionChoices">
+            <p><a href="nutritionGuides.html">Nutrition Guides</a></p>
+            <p><a href="videoProgram.html">Program Video</a></p>
+            <p><a href="equipmentInfo.html">Equipment Info</a></p>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="videoAndComment">
+            <div class="videos">
+                <div class="chest">
+                    <iframe width="928" height="522" src="https://www.youtube.com/embed/O9K0k7fzrqU" title="5-Minute Chest Workout at Home: Build Muscle Without Equipment" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="shoulder">
+                    <iframe width="928" height="522" src="https://www.youtube.com/embed/mCmojndsXeg" title="Shoulder Workout - The best video on YouTube for shoulder building" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="leg">
+                    <iframe width="928" height="522" src="https://www.youtube.com/embed/csUWMhIwV8c" title="FULL LEG WORKOUT | 5 Exercises for Bigger Legs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="back">
+                    <iframe width="928" height="522" src="https://www.youtube.com/embed/zgfcOWuTeYA" title="Top Trainers Agree, These are the 10 Best Exercises for Building a Bigger Back" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="core">
+                    <iframe  width="928" height="522" src="https://www.youtube.com/embed/E4BpA2jCB2g" title="10 MIN ABS WORKOUT - At Home Sixpack Ab Routine (No Equipment)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="bicep">
+                    <iframe width="928" height="522" src="https://www.youtube.com/embed/JeEYrx_zVyM" title="7 Effective Biceps Exercises At Gym - Biceps Workout" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="cardio">
+                    <iframe width="928" height="522" src="https://www.youtube.com/embed/kZDvg92tTMc" title="30 MIN PUMPING CARDIO WORKOUT | Full Body - No Equipment at Home" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <div class="tricep">
+                    <iframe width="928" height="522" src="https://www.youtube.com/embed/5kstCo2lZW0" title="10 Minute Tricep Workout at Home with Dumbbells &amp; Bodyweight" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="commentAndTitle">
+                <h1 class="nameVid">Chest Tutorial</h1>
+                <div class="commentChest">
+                    <p class="commentText">Comment to all videos:</p>
+                    <ul id="comment">
+                        <li>Anonymous: <p>WOW! Cool Video</p></li>
+                        <li>Anonymous: <p>Very Helpful</p></li>
+                        <li>Anonymous: <p>Awesome Vids!</p></li>
+                        <li>Anonymous: <p>I'll Try It!</p></li>
+                        <li>Anonymous: <p>WOW! Nice</p></li>
+                        <li>Anonymous: <p>WOW!</p></li>
+                        <li>Anonymous: <p>Omggggg This is very helpfulllllllll</p></li>
+                    </ul>
+                    <input type="text" placeholder="Write a Comment" class="input">
+                    <button onclick="send(event)">send</button>
+                </div>
+
+                <div class="commentBack">
+                    <p class="commentText">Comment to all videos:</p>
+                    <ul id="comment">
+                        <li>Anonymous: <p>WOW! Cool Video</p></li>
+                        <li>Anonymous: <p>Very Helpful</p></li>
+                        <li>Anonymous: <p>Awesome Vids!</p></li>
+                        <li>Anonymous: <p>I'll Try It!</p></li>
+                        <li>Anonymous: <p>WOW! Nice</p></li>
+                        <li>Anonymous: <p>WOW!</p></li>
+                        <li>Anonymous: <p>Omggggg This is very helpfulllllllll</p></li>
+                    </ul>
+                    <input type="text" placeholder="Write a Comment" class="input">
+                    <button onclick="send(event)">send</button>
+                </div>
+                <div class="commentBicep">
+                    <p class="commentText">Comment to all videos:</p>
+                    <ul id="comment">
+                        <li>Anonymous: <p>WOW! Cool Video</p></li>
+                        <li>Anonymous: <p>Very Helpful</p></li>
+                        <li>Anonymous: <p>Awesome Vids!</p></li>
+                        <li>Anonymous: <p>I'll Try It!</p></li>
+                        <li>Anonymous: <p>WOW! Nice</p></li>
+                        <li>Anonymous: <p>WOW!</p></li>
+                        <li>Anonymous: <p>Omggggg This is very helpfulllllllll</p></li>
+                    </ul>
+                    <input type="text" placeholder="Write a Comment" class="input">
+                    <button onclick="send(event)">send</button>
+                </div>
+                <div class="commentCardio">
+                    <p class="commentText">Comment to all videos:</p>
+                    <ul id="comment">
+                        <li>Anonymous: <p>WOW! Cool Video</p></li>
+                        <li>Anonymous: <p>Very Helpful</p></li>
+                        <li>Anonymous: <p>Awesome Vids!</p></li>
+                        <li>Anonymous: <p>I'll Try It!</p></li>
+                        <li>Anonymous: <p>WOW! Nice</p></li>
+                        <li>Anonymous: <p>WOW!</p></li>
+                        <li>Anonymous: <p>Omggggg This is very helpfulllllllll</p></li>
+                    </ul>
+                    <input type="text" placeholder="Write a Comment" class="input">
+                    <button onclick="send(event)">send</button>
+                </div>
+                <div class="commentCore">
+                    <p class="commentText">Comment to all videos:</p>
+                    <ul id="comment">
+                        <li>Anonymous: <p>WOW! Cool Video</p></li>
+                        <li>Anonymous: <p>Very Helpful</p></li>
+                        <li>Anonymous: <p>Awesome Vids!</p></li>
+                        <li>Anonymous: <p>I'll Try It!</p></li>
+                        <li>Anonymous: <p>WOW! Nice</p></li>
+                        <li>Anonymous: <p>WOW!</p></li>
+                        <li>Anonymous: <p>Omggggg This is very helpfulllllllll</p></li>
+                    </ul>
+                    <input type="text" placeholder="Write a Comment" class="input">
+                    <button onclick="send(event)">send</button>
+                </div>
+                <div class="commentLegs">
+                    <p class="commentText">Comment to all videos:</p>
+                    <ul id="comment">
+                        <li>Anonymous: <p>WOW! Cool Video</p></li>
+                        <li>Anonymous: <p>Very Helpful</p></li>
+                        <li>Anonymous: <p>Awesome Vids!</p></li>
+                        <li>Anonymous: <p>I'll Try It!</p></li>
+                        <li>Anonymous: <p>WOW! Nice</p></li>
+                        <li>Anonymous: <p>WOW!</p></li>
+                        <li>Anonymous: <p>Omggggg This is very helpfulllllllll</p></li>
+                    </ul>
+                    <input type="text" placeholder="Write a Comment" class="input">
+                    <button onclick="send(event)">send</button>
+                </div>
+                <div class="commentShoulder">
+                    <p class="commentText">Comment to all videos:</p>
+                    <ul id="comment">
+                        <li>Anonymous: <p>WOW! Cool Video</p></li>
+                        <li>Anonymous: <p>Very Helpful</p></li>
+                        <li>Anonymous: <p>Awesome Vids!</p></li>
+                        <li>Anonymous: <p>I'll Try It!</p></li>
+                        <li>Anonymous: <p>WOW! Nice</p></li>
+                        <li>Anonymous: <p>WOW!</p></li>
+                        <li>Anonymous: <p>Omggggg This is very helpfulllllllll</p></li>
+                    </ul>
+                    <input type="text" placeholder="Write a Comment" class="input">
+                    <button onclick="send(event)">send</button>
+                </div>
+                <div class="commentTricep">
+                    <p class="commentText">Comment to all videos:</p>
+                    <ul id="comment">
+                        <li>Anonymous: <p>WOW! Cool Video</p></li>
+                        <li>Anonymous: <p>Very Helpful</p></li>
+                        <li>Anonymous: <p>Awesome Vids!</p></li>
+                        <li>Anonymous: <p>I'll Try It!</p></li>
+                        <li>Anonymous: <p>WOW! Niceeeee</p></li>
+                        <li>Anonymous: <p>WOW!</p></li>
+                        <li>Anonymous: <p>Omggggg This is very helpfulllllllll</p></li>
+                    </ul>
+                    <input type="text" placeholder="Write a Comment" class="input">
+                    <button onclick="send(event)">send</button>
+                </div>
+                <button class="commentButton1" onclick="comment1()">comment here!</button>
+                <button class="commentButton2" onclick="comment2()">comment here!</button>
+                <button class="commentButton3" onclick="comment3()">comment here!</button>
+                <button class="commentButton4" onclick="comment4()">comment here!</button>
+                <button class="commentButton5" onclick="comment5()">comment here!</button>
+                <button class="commentButton6" onclick="comment6()">comment here!</button>
+                <button class="commentButton7" onclick="comment7()">comment here!</button>
+                <button class="commentButton8" onclick="comment8()">comment here!</button>
+            </div>
+        </div>
+        <div class="optionVideo">
+            <div onclick="chestt()" class="chestChoice">
+                <img src="pics\VideoTutorial\chest.png" alt="Thumbnail" srcset="">
+                <p>Chest tutorial</p>
+            </div>
+            <div onclick="shoulderr()" class="shoulderChoice">
+                <img src="pics\VideoTutorial\shoulder.png" alt="Thumbnail" srcset="">
+                <p>Shoulder tutorial</p>
+            </div>
+            <div onclick="legss()" class="legChoice">
+                <img src="pics\VideoTutorial\leg.png" alt="Thumbnail" srcset="">
+                <p>Leg tutorial</p>
+            </div>
+            <div onclick="backk()" class="backChoice">
+                <img src="pics\VideoTutorial\back.png" alt="Thumbnail" srcset="">
+                <p>Back tutorial</p>
+            </div>
+            <div onclick="coree()" class="coreChoice">
+                <img src="pics\VideoTutorial\core.png" alt="Thumbnail" srcset="">
+                <p>Core tutorial</p>
+            </div>
+            <div onclick="bicepp()" class="bicepChoice">
+                <img src="pics\VideoTutorial\bicep.png" alt="Thumbnail" srcset="">
+                <p>Bicep tutorial</p>
+            </div>
+            <div onclick="cardioo()" class="cardioChoice">
+                <img src="pics\VideoTutorial\cardio.png" alt="Thumbnail" srcset="">
+                <p>Cardio tutorial</p>
+            </div>
+            <div onclick="tricepp()" class="tricepChoice">
+                <img src="pics/VideoTutorial/tricep.png" alt="Thumbnail" srcset="">
+                <p>tricep tutorial</p>
+            </div>
+        </div>
+    </div>
+    <script src="nav.js"></script>
+    <script src="videoProgram.js"></script>
+</body>
+</html> 

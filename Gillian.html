@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+      header {
+        background: #333;
+        color: #fff;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 20px;
+      }
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 15px;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 20px auto;
+        padding: 0 20px;
+      }
+      .section {
+        background: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 6px;
+      }
+      .section h2 {
+        margin-top: 0;
+      }
+      .info {
+        display: grid;
+        gap: 10px;
+      }
+      .info-item {
+        background: #eee;
+        padding: 10px;
+        border-radius: 4px;
+      }
+      footer {
+        text-align: center;
+        padding: 15px;
+        background: #333;
+        color: #fff;
+        margin-top: 20px;
+      }
+      .about-container {
+        display: flex;
+      }
+      .about-container img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Gillian I. Cortez</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#info">Info</a>
+        <a href="#skills">Skills</a>
+        <a href="#message">Message</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section class="section" id="about">
+        <h2>About Me</h2>
+        <div class="about-container">
+          <img src="gilPic.jpeg" alt="Photo" />
+          <p>
+            Hi! I’m Gillian I. Cortez, a passionate and curious individual who
+            enjoys learning new things and exploring creative ideas. I value
+            growth, hard work, and finding ways to improve myself every day.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="info">
+        <h2>Personal Info</h2>
+        <div class="info">
+          <div class="info-item"><strong>Living:</strong> Capas Tarlac</div>
+          <div class="info-item">
+            <strong>Birthday:</strong> December 26, 2003
+          </div>
+          <div class="info-item">
+            <strong>Education:</strong> 4th Year College
+          </div>
+          <div class="info-item">
+            <strong>Hobbies:</strong> Coding and Watching
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <h2>Skills</h2>
+        <div class="info">
+          <div class="info-item">HTML</div>
+          <div class="info-item">CSS</div>
+          <div class="info-item">JAVASCRIPT</div>
+          <div class="info-item">REACT JS</div>
+        </div>
+      </section>
+
+      <section class="section" id="message">
+        <h2>Message to the Viewer</h2>
+        <p>
+          Thank you for taking the time to visit my portfolio. I hope this gives
+          you a glimpse of who I am and what I do. Your time means a lot, and I
+          truly appreciate your interest. Feel free to explore and get to know
+          me better I’m always open to new opportunities, ideas, and
+          connections.
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      <p>© 2025 Gillian I. Cortez. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
