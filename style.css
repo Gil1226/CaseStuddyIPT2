@@ -1,0 +1,281 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    cursor: default;
+}
+
+.frontContainer{
+    height: 110vh;
+    background:#11151c;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.home{
+    position: fixed;
+    width: 27px;
+    height: 27x;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 97%;
+    margin-top: 84vh;
+    font-size: 18px;
+    background-color: rgb(115, 115, 115);
+    border-radius: 50%;
+}
+.home i{
+    font-size: 15px;
+    color: #161b24;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background: rgba(0,0,0,0.1);
+}
+.logo{
+    margin-left: 30px;
+    cursor: default;
+    font-family: 'Cedarville Cursive', cursive;
+    color: #457b9d;
+}
+nav ul {
+    display: inline-flex;
+    list-style: none;
+    margin-right: 20px;
+    font-weight: 550;
+}
+nav ul li a{
+    font-size: 17px;
+    text-decoration: none;
+    padding: 10px 20px;
+}   
+ul li a:hover{
+    color: #434242;
+}
+#menuBtn1{
+    color: #457b9d;
+}
+.aboutFrontContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.about{
+    width: 600px;
+    height: 50vh;
+    margin-left: 100px;
+    margin-top: 150px;
+    font-size: 40px;
+    font-weight: bolder;
+    
+}
+.about button{
+    width: 150px;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 17px;
+    color:#ffffff;
+    background: linear-gradient(to left, #11151c,#212d40,#11151c);
+    border-radius: 50px;
+    border: 3px solid #364156;
+}
+.about button:hover{
+    color: #457b9d;
+    background:#11151c;
+}
+.name{
+    font-size: 60px;
+    color: #457b9d;
+}
+
+.frontEnd{
+    position: relative;
+}
+.frontEnd::after{
+    content: "|";
+    position: absolute;
+    color: White;
+    background: #11151c;
+    right: 0;
+    width: 100%;
+    animation:  typeAnimation 5s steps(30) alternate infinite,
+                blinkAnimation 1s infinite;
+}
+@keyframes typeAnimation {
+    to{
+        width: 0%;
+    }
+}
+@keyframes blinkAnimation {
+    50%{
+        color: transparent;
+    }
+}
+.aboutFrontContainer img{
+    margin-top: 100px;
+    margin-right: 150px;
+    width: 400px;
+}
+.aboutContainer{
+    background-color:#161b24;
+    height: 110vh;
+    color: #bababa;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 200px;
+    background: radial-gradient(circle at center, #212d40 20%, #11151c 80%);
+}
+.aboutContainer img{
+    width: 400px;
+}
+.description{
+    width: 500px;
+    cursor: context-menu;
+}
+section .animate{
+    transition: 1s;
+}
+.aboutContainer p:nth-child(1){
+    font-size: 40px;
+    color:#457b9d;
+}
+.aboutSec .animate:nth-child(1){
+    transform: translateY(-100px);
+    opacity: 0;
+}
+.aboutContainer p:nth-child(2){
+    font-size: 25px;
+    font-weight: 10;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.aboutSec .animate:nth-child(2){
+    transform: translatex(-100px);
+    opacity: 0;
+}
+.aboutSec .animate:nth-child(3){
+    transform: translatex(-100px);
+    opacity: 0;
+}
+.aboutContainer p:nth-child(4){
+    font-size: 25px;
+    font-weight: 10;
+    margin-top: 50px;
+    color:#457b9d;
+}
+.aboutSec .animate:nth-child(4){
+    transform: translateY(-50px);
+    opacity: 0;
+}
+.skillContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.skillContainer img{
+    width: 50px;
+    height: 50px;
+}
+.skillContainer div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.aboutSec .animate:nth-child(5){
+    transform: scaleX(.1);
+    opacity: 0;
+}
+.aboutSec.showAnimate .animate{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.projectAndContactContainer{
+    background: #161b24;
+    height: 100vh;
+    overflow: hidden;
+}
+.projContainer{
+    width: 100%;
+    height: 85vh;
+    background: #161b24
+}
+.projContainer p:nth-child(1){
+    font-size: 35px;
+    padding: 50px 70px;
+    color:#457b9d;
+}
+.projItemsBg{
+    height: 400px;
+    width: 1170px;
+    margin-left: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.projectItem{
+    background-color: #364156;
+    height: 400px;
+    width: 300px;
+    margin: 20px 20px 50px 20px;
+    padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+}
+.projectItem img{
+    object-fit: cover;
+    border-radius: 5px;
+    height: 270px;
+    width: 220px;
+}
+.projectItem p:nth-child(3){
+    font-size: 13px;
+    color: #11151c;
+    text-decoration-line: underline;
+}
+
+.contactContainer{
+    height: 15vh;
+    background: #11151c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px 30px 0px 0px;
+}
+.contactContainer p{
+    font-size: 20px;
+}
+.contactLogo{
+    display: inline;
+    font-size: 20px;
+}
+.contactContainer i{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+section .animate{
+    transition: 1s;
+}
+.contactSec .animate{
+    transform: translateY(10vh);
+}
+.contactSec .contactLogo.animate{
+    transform: scaleX(.1);
+}
+.contactSec.showAnimate .animate{
+    transform: translateY(0);
+}
