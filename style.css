@@ -98,26 +98,7 @@ ul li a:hover{
 .frontEnd{
     position: relative;
 }
-.frontEnd::after{
-    content: "|";
-    position: absolute;
-    color: White;
-    background: #11151c;
-    right: 0;
-    width: 100%;
-    animation:  typeAnimation 5s steps(30) alternate infinite,
-                blinkAnimation 1s infinite;
-}
-@keyframes typeAnimation {
-    to{
-        width: 0%;
-    }
-}
-@keyframes blinkAnimation {
-    50%{
-        color: transparent;
-    }
-}
+
 .aboutFrontContainer img{
     margin-top: 100px;
     margin-right: 150px;
