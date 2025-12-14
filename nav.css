@@ -29,9 +29,13 @@ nav ul {
     align-items: center;
     list-style: none;
 }
+nav ul li{
+    width: 100px;
+}
+
 nav ul li a {
-    padding: 20px;
     font-size: 18px;
+    margin-left: 40px;
 }
 nav ul li a:hover{
     font-size: 24px;
@@ -39,7 +43,7 @@ nav ul li a:hover{
 nav ul li:nth-child(4) {
     font-size: 35px;
     font-weight: bolder;
-    padding: 20px;
+    padding-left: 50px;
     cursor: pointer;
 }
 nav ul li:nth-child(4):hover {
@@ -51,7 +55,7 @@ nav ul li:nth-child(4):hover {
     right: 40px;
     top: 35px;
     width: 300px;
-    height: 250px;
+    height: 300px;
     border: 2px solid #a4a4a4;
     border-radius: 24px 0px 24px 0px;
     font-size: 24px;
