@@ -1,0 +1,92 @@
+nav ul li:nth-child(4) {
+    color: #BA181B;
+}
+
+.container {
+    height: 93vh;
+}
+
+.aboutAndTools {
+    display: flex;
+    align-items: start;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 35.5vh 35.5vh;
+}
+
+.gridContainer div {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.gridContainer div img{
+    height: 10vw;
+    width: 10vw;
+}
+
+.aboutAndTools div p:nth-child(1) {
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    text-align: center;
+    font-size: 32px;
+}
+
+.equipmentDescription p:nth-child(2) {
+    width: 30vw;
+    height: 60vh;
+    padding: 20px;
+    border-right: 1px solid #BA181B;
+    overflow: scroll;
+}
+.equipmentDescription p:nth-child(2)::-webkit-scrollbar{
+    width: 0;
+}
+.container > p {
+    text-align: right;
+    margin-right: 4vw;
+    margin-top: 1vh;
+}
+
+@media (max-width: 768px) {
+    .aboutAndTools{
+        align-items: center;
+        flex-direction: column;
+    }
+    .aboutAndTools .equipmentDescription p{
+        width: 100%;
+        padding: 0% 10%;
+    }
+    .equipmentDescription p:nth-child(2){
+        margin-bottom: 5vh;
+        height: 50vh;
+        padding: 5vw;
+        border: none;
+    }
+    .gridContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 35vh 35vh 35vh;
+    }
+    .gridContainer div img{
+        height: 120px;
+        width: 120px;
+    }
+}
+@media (max-width: 617px) {
+    .aboutAndTools {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 20px;
+    }
+    
+}
+
