@@ -48,7 +48,7 @@ nav{
     background-color: rgb(41, 48, 55);
     font-size: 0.9vw;
 }
-.picHome img{
+.imgHome img{
     margin-top: 10vh;
     height: 25vw;
     width: 40vw;
@@ -137,6 +137,31 @@ nav{
     width: 0;
 }
 
+.card{
+    background: linear-gradient(135deg, #A4161A, #660708);
+    height: 60vh;
+    width: 25vw;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(255, 56, 56, 0.2);
+    padding: 2vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+}
+.card h2{
+    text-align: center;
+    margin-bottom: 10px;
+    width: 21vw;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+.card p:nth-child(3){
+    margin-top: 10px;
+    height: 40vh;
+    overflow-y: scroll;
+}
+
+
+
 @media (max-width: 623px) {
     .aboutContainer>p{
         display: none;
@@ -145,7 +170,7 @@ nav{
         width: 100vw;
         position: relative;
     }
-    .picHome{
+    .imgHome{
         display: none;
     }
     .container{
