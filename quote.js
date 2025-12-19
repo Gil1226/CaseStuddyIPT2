@@ -1,24 +1,15 @@
-const quoteBox = document.getElementById("quote");
-
-async function getQuote() {
-    try {
-        const response = await fetch("https://type.fit/api/quotes");
-        const data = await response.json(); 
-
-        const randomQuote = data[Math.floor(Math.random() * data.length)];
-
-        quoteBox.innerHTML = `
-            <p style="font-family: 'Questrial', sans-serif; font-size: 16px;">
-                “${randomQuote.text}”
-            </p>
-            <span style="font-size: 14px; opacity: 0.7;">
-                — ${randomQuote.author || "Unknown"}
-            </span>
-        `;
-    } catch (error) {
-        quoteBox.textContent = "Failed to load quote";
-        console.error("Error fetching quote:", error);
-    }
+function loadQuote() {
+    fetch("https://quoteapi.infinityfreeapp.com/quote.php")
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById("quote").innerHTML =
+                `"${data[0].q}" <br><b>— ${data[0].a}</b>`;
+        })
+        .catch(err => {
+            console.error(err);
+            document.getElementById("quote").innerText =
+                "Failed to load quote.";
+        });
 }
 
-getQuote();;
+loadQuote();
