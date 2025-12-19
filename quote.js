@@ -1,10 +1,14 @@
-function loadQuote() {
-    fetch("https://quoteapi.infinityfreeapp.com/quote.php")
-        .then(res => res.json())
-        .then(data => {
-            document.getElementById("quote").innerHTML =
-                `"${data[0].q}" <br><b>— ${data[0].a}</b>`;
-        })
-}
+const quoteEl = document.getElementById('quote');
 
-loadQuote();
+    async function loadQuote() {
+      try {
+        const res = await fetch('https://api.quotable.io/random');
+        const data = await res.json();
+        quoteEl.textContent = `“${data.content}” — ${data.author}`;
+      } catch (err) {
+        quoteEl.textContent = "Oops! Could not load a quote.";
+        console.error(err);
+      }
+    }
+
+    loadQuote();
