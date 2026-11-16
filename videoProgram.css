@@ -1,177 +1,239 @@
-nav ul li:nth-child(4){
+nav ul li:nth-child(4) {
     color: #BA181B;
 }
-.container{
-    height: 93vh;
-}
-.videoAndComment{
+
+.container {
+    min-height: calc(100vh - 60px);
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0vw 2vw;
-    height: 70vh;
+    flex-direction: column;
 }
-.back, .bicep, .cardio, .core, .leg, .shoulder, .tricep{
+.videoAndComment {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 24px 3vw;
+}
+
+.videos {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.back, .bicep, .cardio, .core, .leg, .shoulder, .tricep {
     display: none;
 }
-.videos div iframe{
-    width: 55vw;
-    height: 30vw;
-    border: 5px solid #a4a4a4;
+.videos div iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 4px solid #a4a4a4;
     border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
-.commentAndTitle{
-    width: 30vw;
-    background-color: #161A1D;
+
+.commentAndTitle {
+    flex: 0 0 clamp(280px, 30vw, 380px);
+    min-width: 0;
+    padding: 18px;
+    background-color: #1b2024;
+    border: 1px solid #2c343b;
+    border-radius: 16px;
 }
-.nameVid{
+.nameVid {
+    padding-bottom: 10px;
+    margin-bottom: 14px;
     border-bottom: 1px solid #BA181B;
-    font-size: 3vw;
+    font-size: clamp(1.3rem, 2vw, 1.9rem);
 }
-.commentText{
+.commentText {
+    margin-bottom: 8px;
     color: #a4a4a4;
+    font-size: 0.9rem;
 }
-#comment{
+#comment {
     list-style: none;
-    width: 30vw;
-    height: 20vw;
-    overflow: scroll;
+    padding: 0;
+    width: 100%;
+    height: clamp(220px, 24vw, 340px);
+    margin-bottom: 14px;
+    overflow-y: auto;
     font-size: 14px;
 }
-#comment::-webkit-scrollbar{
+#comment::-webkit-scrollbar {
     width: 0;
 }
-.commentChest{
-    display: block;
+#comment li {
+    padding: 8px 0;
+    border-bottom: 1px solid #2c343b;
+    overflow-wrap: anywhere;
 }
-.commentBack, .commentBicep, .commentCardio, .commentCore, .commentLegs, .commentShoulder, .commentTricep{
-    display: none;
-}
-#comment p{
+#comment p {
     display: inline;
     color: #a4a4a4;
 }
-.commentAndTitle input{
+.commentChest {
+    display: block;
+}
+.commentBack, .commentBicep, .commentCardio, .commentCore,
+.commentLegs, .commentShoulder, .commentTricep {
+    display: none;
+}
+.commentAndTitle input {
+    width: calc(100% - 70px);
+    padding: 8px 2px;
     background-color: transparent;
     border: none;
     border-bottom: 2px solid #a4a4a4;
-    width: 20vw;
+    transition: border-color 0.2s;
 }
-.commentAndTitle input:focus{
+.commentAndTitle input:focus {
     outline: none;
+    border-bottom-color: #BA181B;
 }
-.commentAndTitle div button{
+.commentAndTitle div button {
+    padding: 6px 12px;
     background-color: transparent;
     border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
-.commentAndTitle div button:active{
+.commentAndTitle div button:hover {
+    background-color: #BA181B;
+}
+.commentAndTitle div button:active {
     opacity: 0.6;
 }
-.commentAndTitle div button:hover{
-    background-color: #BA181B;
-    border-radius: 5px;
+
+.commentButton1, .commentButton2, .commentButton3, .commentButton4,
+.commentButton5, .commentButton6, .commentButton7, .commentButton8 {
+    display: none;
+    background-color: #1b2024;
+    color: #1b2024;
+    border: none;
 }
+
 .optionVideo {
     display: flex;
     align-items: center;
-    overflow-x: scroll;
-    height: 23vh;
+    gap: 16px;
+    padding: 16px 3vw;
+    overflow-x: auto;
     border-top: 1px solid #BA181B;
+    scroll-snap-type: x proximity;
+    scrollbar-width: thin;
+    scrollbar-color: #BA181B transparent;
 }
-.optionVideo div{
-    margin-left: 5vw;
+.optionVideo::-webkit-scrollbar {
+    display: block;
+    height: 6px;
 }
-.optionVideo div img{
-    border: 5px solid #a4a4a4;
+.optionVideo::-webkit-scrollbar-thumb {
+    background: #BA181B;
+    border-radius: 3px;
+}
+.optionVideo div {
+    flex: 0 0 clamp(130px, 18vw, 200px);
+    margin: 0;
+    cursor: pointer;
+    scroll-snap-align: start;
+    transition: transform 0.2s;
+}
+.optionVideo div:hover {
+    transform: translateY(-4px);
+}
+.optionVideo div img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 4px solid #a4a4a4;
     border-radius: 10px;
-    width: 200px;
+    transition: border-color 0.2s;
 }
-.chestChoice{
+.optionVideo div:hover img {
+    border-color: #BA181B;
+}
+.optionVideo div p {
+    margin-top: 6px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.chestChoice {
     display: none;
 }
-.commentButton1,.commentButton2,.commentButton3,.commentButton4,.commentButton5,.commentButton6,.commentButton7,.commentButton8{
-    background-color: #161A1D;
-    color: #161A1D;
-    border: none;
-}
-@media (max-width: 768px) {
-    .videos div iframe{
-        width: 60vw;
-        height: 34vw;
-        border: 5px solid #a4a4a4;
-        border-radius: 20px;
+
+@media (max-width: 900px) {
+    .videoAndComment {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        padding: 16px 4vw;
     }
-    .optionVideo div img{
-        width: 150px;
+    .commentAndTitle {
+        flex: none;
+        width: 100%;
     }
-    
-    
+    #comment {
+        height: 220px;
+    }
 }
 
 @media (max-width: 480px) {
-    .videoAndComment{
-        flex-direction: column;
-        justify-content: center;
-        height: 70vh;
-        width: 100vw;
+    .videoAndComment {
+        padding: 16px 4vw;
+        gap: 12px;
         background-color: #161A1D;
     }
-    .videos div iframe{
-        width: 80vw;
-        height: 50vw;
-        margin-top: 20px;
+    .videos div iframe {
+        border-width: 3px;
+        border-radius: 14px;
     }
-    .commentAndTitle{
-        margin-top: 5vh;
-        height: 20vh;
-        width: 100vw;
+    .commentAndTitle {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         flex-direction: column;
-    }
-    .nameVid{
-        font-size: 20px;
+        gap: 12px;
+        padding: 0;
+        background-color: #161A1D;
         border: none;
+        border-radius: 0;
     }
-    .optionVideo div img{
-        width: 150px;
+    .nameVid {
+        margin: 0;
+        border: none;
+        font-size: 1.25rem;
+        text-align: center;
     }
-    .commentAndTitle div{
+    .commentAndTitle div {
         position: absolute;
         top: 10vh;
-        height: 50vh;
+        left: 5vw;
         width: 90vw;
+        height: 50vh;
+        padding: 14px;
         background-color: black;
-        border: 5px solid #a4a4a4;
+        border: 3px solid #a4a4a4;
         border-radius: 20px;
-        padding: 10px;
         z-index: -1;
     }
-    #comment{
-        width: 80vw;
-        height: 35vh;
-        overflow: scroll;
-        font-size: 14px;
+    #comment {
+        width: 100%;
+        height: calc(50vh - 120px);
     }
-    .commentChest{
-        display: block;
-    }
-    .commentAndTitle input{
-        width: 50vw;
-    }
-    .chestChoice{
+    .commentButton1, .commentButton2, .commentButton3, .commentButton4,
+    .commentButton5, .commentButton6, .commentButton7, .commentButton8 {
         display: none;
-    }
-    .commentButton1,.commentButton2,.commentButton3,.commentButton4,.commentButton5,.commentButton6,.commentButton7,.commentButton8{
-        height: 7vw;
-        width: 50vw;
+        width: min(60vw, 240px);
+        height: 42px;
+        margin-top: 0;
         background-color: transparent;
+        border: 3px solid #BA181B;
         border-radius: 20px;
         color: white;
-        border: 3px solid #BA181B;
         text-align: center;
-        margin-top: 10vh;
-        display: none;
+        cursor: pointer;
     }
 }

@@ -1,194 +1,186 @@
-.btn-container{
-    width: 100vw;
+/* ===== Layout ===== */
+.container {
+    padding: 0 20px 30px;
+}
+
+.item-container {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    
-}
-#showNutri, #showCals, #showBMI{
-    background-color: rgb(27,32,36);
-    padding: 10px 20px;
-    width: 10vw;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    margin: 20px;
-    z-index: 10;   
-}
-#showNutri:hover, #showCals:hover, #showBMI:hover{
-    background-color: #ccc;
-    color: black;
+    gap: 20px;
 }
 
-
-.item-container{
-    display: flex;
-    justify-content: space-around;
-}
-
-
-.bmi-container{
-    width: 30vw;
+/* Shared card styles */
+.nutrition-container,
+.calories-container,
+.bmi-container {
+    flex: 1 1 300px;
+    max-width: 420px;
+    min-width: 0;
+    min-height: 500px;
     height: 80vh;
     padding: 20px;
+    margin-top: 5vh;
     background-color: transparent;
     border: 1px solid #ccc;
     border-radius: 20px;
-    margin-top: 5vh;
-}
-.bmi-container p{
-    text-align: center;
-}
-
-.input-container{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
-.input-container input{
-    width: 20vw;
-    padding: 10px 10px;
-    margin-bottom: 10px;
+
+.nutrition-container > p,
+.calories-container > p,
+.bmi-container > p {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* ===== BMI ===== */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+}
+.input-container input {
+    width: 100%;
+    padding: 10px 14px;
     border-radius: 20px;
     background-color: transparent;
     border: 1px solid #ccc;
 }
-#bmi-btn{
-    padding: 10px 10px;
+#bmi-btn {
+    padding: 10px 20px;
     background-color: rgb(51, 66, 78);
     border: 1px solid #ccc;
     border-radius: 20px;
     display: block;
-    margin: 10px auto ;
+    margin: 15px auto;
+    cursor: pointer;
 }
-#bmi-btn:hover{
+#bmi-btn:hover {
     background-color: transparent;
 }
-.result-container{
-    margin: 50px 20px;
+.result-container {
+    margin: 20px 0;
+    overflow-wrap: anywhere;
 }
 
-
-
-
-
-.nutrition-container p{
-    text-align: center;
+/* ===== Nutrition ===== */
+.input-nutrition-container {
+    display: flex;
+    width: 100%;
 }
-.nutrition-container{
-    width: 30vw;
-    height: 80vh;
-    padding: 20px;
-    background-color: transparent;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    margin-top: 5vh;
-}
-.input-nutrition-container{
-    position: absolute;
-}
-.input-nutrition-container input:nth-child(1){
-    width: 20vw;
-    padding: 10px 10px;
-    margin-bottom: 10px;
-    border-radius: 20px 0px 0px 20px;
+.input-nutrition-container input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 14px;
+    border-radius: 20px 0 0 20px;
     background-color: transparent;
     border: 1px solid #ccc;
 }
-#nutrition-btn{
-    width: 5vw;
-    padding: 10px 10px;
-    margin-bottom: 10px;
-    border-radius: 0px 20px 20px 0px;
+#nutrition-btn {
+    padding: 10px 16px;
+    border-radius: 0 20px 20px 0;
     background-color: transparent;
     border: 1px solid #ccc;
+    cursor: pointer;
 }
-#nutrition-btn:hover{
+#nutrition-btn:hover {
     background-color: #ccc;
     color: black;
 }
-#resultNutrition{
-    width: 27vw;
-    height: 60vh;
-    margin-top: 10vh;
-    overflow-y: scroll;
-    padding: 20px 0px;
+#resultNutrition {
+    flex: 1;
+    min-height: 0;
+    margin-top: 15px;
+    overflow-y: auto;
+    padding: 10px 0;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
-.nutrition-card {
-    background-color: transparent;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    padding: 15px 20px;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
 
-
-
-
-
-
-
-.calories-container{
-    width: 30vw;
-    height: 80vh;
-    padding: 20px;
-    background-color: transparent;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    margin-top: 5vh;
-}
-.calories-container p{
-    text-align: center;
-}
-.input-calories-container{
+/* ===== Calories ===== */
+.input-calories-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
+    gap: 10px;
+    padding: 10px 0;
 }
-.input-calories-container input, .input-calories-container select{
-    width: 7vw;
-    padding: 5px 10px;
-    margin-bottom: 10px;
+.input-calories-container input,
+.input-calories-container select {
+    flex: 1 1 90px;
+    min-width: 0;
+    padding: 8px 12px;
     border-radius: 20px;
     background-color: transparent;
     border: 1px solid #ccc;
-    margin-left: 10px;
-    
 }
-.input-calories-container option{
+.input-calories-container option {
     color: black;
 }
-#calories-btn{
-    width: 10vw;
-    padding: 5px 10px;
+#calories-btn {
+    align-self: center;
+    padding: 8px 24px;
     margin-bottom: 10px;
     border-radius: 20px;
     background-color: transparent;
     border: 1px solid #ccc;
-    margin-left: 9vw;
-
+    cursor: pointer;
 }
-#calories-btn:hover{
+#calories-btn:hover {
     background-color: #ccc;
     color: black;
 }
-#resultCalories{
-    width: 27vw;
-    height: 53vh;
-    overflow-y: scroll;
-    padding: 20px 0px;
+#resultCalories {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 10px 0;
 }
-.calories-card{
+
+/* ===== Result cards ===== */
+.nutrition-card,
+.calories-card {
     background-color: transparent;
     border: 1px solid #ccc;
     border-radius: 12px;
     padding: 15px 20px;
     margin-bottom: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.2s, box-shadow 0.2s;
+    overflow-wrap: anywhere;
 }
 
+/* ===== Tablet: two cards per row ===== */
+@media (max-width: 1024px) {
+    .nutrition-container,
+    .calories-container,
+    .bmi-container {
+        flex: 1 1 calc(50% - 20px);
+        max-width: none;
+    }
+}
+
+/* ===== Mobile: single column, natural height ===== */
+@media (max-width: 680px) {
+    .container {
+        padding: 0 12px 24px;
+    }
+    .nutrition-container,
+    .calories-container,
+    .bmi-container {
+        flex: 1 1 100%;
+        height: auto;
+        min-height: 0;
+        margin-top: 20px;
+        padding: 16px;
+    }
+    #resultNutrition,
+    #resultCalories {
+        flex: none;
+        max-height: 50vh;
+    }
+}

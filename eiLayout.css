@@ -3,90 +3,117 @@ nav ul li:nth-child(4) {
 }
 
 .container {
-    height: 93vh;
+    min-height: calc(100vh - 60px);
+    padding: 10px 4vw 30px;
 }
 
 .aboutAndTools {
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: space-around;
-    font-size: 20px;
+    gap: 30px;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
 }
 
-.gridContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 35.5vh 35.5vh;
+.equipmentDescription {
+    flex: 0 1 32%;
+    min-width: 0;
 }
-
-.gridContainer div {
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-direction: column;
-}
-
-.gridContainer div img{
-    height: 10vw;
-    width: 10vw;
-}
-
 .aboutAndTools div p:nth-child(1) {
     margin-top: 5vh;
     margin-bottom: 3vh;
     text-align: center;
-    font-size: 32px;
+    font-size: clamp(1.4rem, 2.4vw, 2rem);
 }
-
 .equipmentDescription p:nth-child(2) {
-    width: 30vw;
-    height: 60vh;
+    width: 100%;
+    max-height: 60vh;
     padding: 20px;
     border-right: 1px solid #BA181B;
-    overflow: scroll;
+    overflow-y: auto;
 }
-.equipmentDescription p:nth-child(2)::-webkit-scrollbar{
+.equipmentDescription p:nth-child(2)::-webkit-scrollbar {
     width: 0;
 }
+
+.aboutAndTools > div:nth-child(2) {
+    flex: 1 1 0;
+    min-width: 0;
+}
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+.gridContainer div {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: center;
+}
+.gridContainer div img {
+    height: clamp(90px, 10vw, 150px);
+    width: clamp(90px, 10vw, 150px);
+    object-fit: contain;
+}
+.gridContainer div p {
+    margin-top: 8px;
+}
+
 .container > p {
     text-align: right;
-    margin-right: 4vw;
-    margin-top: 1vh;
+    margin-right: 0;
+    margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-    .aboutAndTools{
+@media (max-width: 900px) {
+    .container {
+        min-height: 0;
+    }
+    .aboutAndTools {
         align-items: center;
         flex-direction: column;
+        gap: 10px;
     }
-    .aboutAndTools .equipmentDescription p{
+    .equipmentDescription,
+    .aboutAndTools > div:nth-child(2) {
+        flex: none;
         width: 100%;
-        padding: 0% 10%;
     }
-    .equipmentDescription p:nth-child(2){
-        margin-bottom: 5vh;
-        height: 50vh;
-        padding: 5vw;
+    .equipmentDescription p:nth-child(2) {
+        max-height: none;
+        padding: 0 5vw;
+        margin-bottom: 4vh;
         border: none;
+        overflow: visible;
     }
     .gridContainer {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 35vh 35vh 35vh;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     }
-    .gridContainer div img{
-        height: 120px;
-        width: 120px;
-    }
-}
-@media (max-width: 617px) {
-    .aboutAndTools {
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        font-size: 20px;
-    }
-    
 }
 
+@media (max-width: 617px) {
+    .aboutAndTools {
+        font-size: 1rem;
+    }
+    .aboutAndTools div p:nth-child(1) {
+        margin-top: 3vh;
+        margin-bottom: 2vh;
+    }
+    .gridContainer {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
+    .gridContainer div {
+        margin: 10px 5px;
+    }
+    .gridContainer div img {
+        height: 100px;
+        width: 100px;
+    }
+    .gridContainer div p {
+        font-size: 0.9rem;
+    }
+}
